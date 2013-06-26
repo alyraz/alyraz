@@ -1,0 +1,51 @@
+body {
+  font-family: "open sans",arial,sans-serif; /*"Helvetica Neue","Helvetica",Arial,sans-serif*/
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  color: #333333;
+  background-color: #FEF0E6;
+  position: relative;
+}
+
+.nameBanner {
+	width: 100%;
+	background-color: #0F1023;
+	z-index: -1;
+}
+
+.solstice {
+	width: 100%;
+}
+
+.imgWrapper {
+	margin-left: 33%;
+	margin-right: 33%;
+}
+
+.intro-text {
+	text-align: center;
+	margin: 10px 10px 20px 10px;
+	font-size: 28px;
+}
+
+.project {
+	width: 30%;
+	float: left;
+	position: relative;
+	margin: 0px 15px 10px 15px;
+}
+
+.project-thumbnail {
+	width: 100%;
+}
+
+.description {
+	margin: 10px;
+}
+
+.footer-text {
+	clear: both;
+	text-align: center;
+	margin: 10px;
+}
+
