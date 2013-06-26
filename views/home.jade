@@ -4,9 +4,8 @@ html(lang="en")
     title= title
     link(rel='stylesheet', href='/style.css')
     script(type='text/javascript')
-      if (foo) {
-         bar()
-      }
+    script(type='text/javascript', src='http://code.jquery.com/jquery-1.9.1.js')
+
   body
     .nameBanner
       .imgWrapper
@@ -15,25 +14,25 @@ html(lang="en")
       .intro-text
         | Alyssa Ravasio is a developer with a degree in Digital Democracy* from UCLA.
       .project
-        a(href='http://www.gopispriorities.com/', target='_blank')
-          img.project-thumbnail(src='/images/gopi.jpg')
-        .description
-          a(href='http://www.gopispriorities.com/', target='_blank') Gopi's Priorities 
-          | is the first app I ever deployed. It is built in homage to 
-          a(href='http://www.kallayil.com/', target='_blank') Gopi Kallayil, 
-          | who taught me these ten priorities at Burning Man 2012. 
-      .project
         a(href='http://www.thegeotube.com/', target='_blank')
           img.project-thumbnail(src='/images/geotube.jpg')
         .description 
-          | The Geotube was my second, built as a final project for 
+          | The Geotube was my final project for 
           a(href='http://devbootcamp.com/', target='_blank') Dev Bootcamp.
-          |  I was extremely fortunate to work with three amazing classmates: 
-          a(href='http://www.enocompton.net/', target='_blank') Eno Compton,  
-          | 
-          a(href='https://github.com/marybethlee', target='_blank') Mary Lee,
-          |  and  
-          a(href='http://www.ryanloomba.com/', target='_blank') Ryan Loomba.
+          |  It was the first time a dream in my head became a live webapp, with the help of three amazing classmates: 
+          a(href='http://www.enocompton.net/', target='_blank') Eno Compton
+          | , 
+          a(href='https://github.com/marybethlee', target='_blank') Mary Lee
+          |,  and  
+          a(href='http://www.ryanloomba.com/', target='_blank') Ryan Loomba. 
+      .project
+        a(href='http://www.gopispriorities.com/', target='_blank')
+          img.project-thumbnail(src='/images/gopi.jpg')
+        .description
+          a(href='http://www.gopispriorities.com/', target='_blank') Gopi's Priorities
+          |  is the first app I built and deployed on my own. It was created in homage to 
+          a(href='http://www.kallayil.com/', target='_blank') Gopi Kallayil,
+          |  who taught me these ten priorities at Burning Man 2012. There is so much more I'd like to do with this project.
       .project 
         a(href='http://alpha.hipcamp.com/', target='_blank')
           img.project-thumbnail(src='/images/hipcamp.jpg')
@@ -43,5 +42,34 @@ html(lang="en")
           |  where I am working to increase public access to campgrounds at State and National Parks. 
           |  Hipcamp helps you discover and reserve campgrounds, and is in alpha. 
       .footer-text
+        a(href='https://github.com/alyraz', target='_blank')
+          img#github-icon.internet-profile-icon(src='/images/black-github.png')
         | * She developed this major herself via the honors individual studies program 
         | because it did not exist. 
+        a(href='https://twitter.com/alyraz', target='_blank')
+          img#twitter-icon.internet-profile-icon(src='/images/black-twitter.png')
+
+  script. 
+    $(document).on('ready', function(){
+      $('.internet-profile-icon').hover( 
+        
+        // mouse enter
+        function(e){
+          if ( $(e.currentTarget).attr('src') === '/images/black-github.png'){
+            $(e.currentTarget).attr('src', '/images/teal-github.png')
+          } else if ( $(e.currentTarget).attr('src') === '/images/black-twitter.png'){
+            $(e.currentTarget).attr('src', '/images/teal-twitter.png')
+          }
+        },
+
+      // mouse exit 
+      function(e){
+          if ( $(e.currentTarget).attr('src') === '/images/teal-github.png'){
+            $(e.currentTarget).attr('src', '/images/black-github.png')
+          } else if ( $(e.currentTarget).attr('src') === '/images/teal-twitter.png'){
+            $(e.currentTarget).attr('src', '/images/black-twitter.png')
+          }
+        }
+      ) // hover
+    })
+

@@ -7,6 +7,15 @@ body {
   position: relative;
 }
 
+a {
+	text-decoration: none; 
+	color: #139787;
+}
+
+a:hover {
+	color: #00D9C8;
+}
+
 .nameBanner {
 	width: 100%;
 	background-color: #0F1023;
@@ -24,7 +33,7 @@ body {
 
 .intro-text {
 	text-align: center;
-	margin: 10px 10px 20px 10px;
+	margin: 23px 10px 29px 10px;
 	font-size: 28px;
 }
 
@@ -46,6 +55,18 @@ body {
 .footer-text {
 	clear: both;
 	text-align: center;
-	margin: 10px;
+	margin: 10px 10px 40px 10px;
 }
+
+
+
+#github-icon {
+	margin: 0px 30px -14px 0px;
+}
+
+#twitter-icon {
+	margin: 0px 0px -8px 40px;
+}
+
+
 
